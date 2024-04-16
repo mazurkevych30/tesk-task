@@ -3,9 +3,10 @@
   gap: 64px;
 }
 
-/* .filter_container {
+.filter_container {
   width: 360px;
-} */
+}
 
-/* .adverts_container {
-} */
+.adverts_container {
+  width: 888px;
+}

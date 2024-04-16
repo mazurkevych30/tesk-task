@@ -5,12 +5,7 @@ const AdvertsItem = ({ advert }) => {
   return (
     <li className={css.adverts_item}>
       <div className={css.camper_img}>
-        <img
-          src={advert.gallery[0]}
-          alt={advert.name}
-          //   width={290}
-          //   height={310}
-        />
+        <img src={advert.gallery[0]} alt={advert.name} />
       </div>
 
       <div className={css.camper_info}>
