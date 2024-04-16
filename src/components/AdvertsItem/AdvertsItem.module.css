@@ -1,0 +1,32 @@
+.adverts_item {
+  width: 840px;
+  display: flex;
+  gap: 24px;
+}
+
+/* .details_item {
+} */
+
+.camper_img {
+  width: 290px;
+  height: 310px;
+  overflow: hidden;
+}
+
+.camper_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.css.camper_info {
+  width: 525px;
+}
+
+.text_description {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 525px;
+  text-overflow: ellipsis;
+}

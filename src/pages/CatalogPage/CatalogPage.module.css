@@ -1,0 +1,11 @@
+.catalog_container {
+  display: flex;
+  gap: 64px;
+}
+
+/* .filter_container {
+  width: 360px;
+} */
+
+/* .adverts_container {
+} */
