@@ -28,7 +28,7 @@ const AdvertsItem = ({ advert }) => {
             }
           })} */}
         </ul>
-        <button>Show more</button>
+        <button className={`text_main`}>Show more</button>
       </div>
     </li>
   );

@@ -1,19 +1,20 @@
 @import-normalize; /* bring in normalize.css styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
+  --color-main: #101828;
   --color-white: #ffffff;
   --color-text-light: #475467;
+  --color-red: #e44848;
 }
 
 body {
   margin: 0;
-  background-color: var(--color-white);
-  color: var(--color-text-light);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
+  color: var(--color-text-light);
 }
 
 code {
@@ -47,4 +48,28 @@ img {
   width: 1342px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.active {
+  color: var(--color-red);
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-red);
+  border-radius: 2px;
+}
+
+.text_main {
+  color: var(--Main, #101828);
+
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
 }

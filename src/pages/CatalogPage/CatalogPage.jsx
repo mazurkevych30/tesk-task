@@ -10,6 +10,7 @@ const CatalogPage = () => {
       </div>
       <div className={css.adverts_container}>
         <AdvertsList />
+        <button className={css.btn_load_more}>Load more</button>
       </div>
     </div>
   );

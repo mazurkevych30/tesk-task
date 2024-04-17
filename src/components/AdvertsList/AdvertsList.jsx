@@ -20,7 +20,6 @@ const AdvertsList = () => {
           <AdvertsItem key={advert._id} advert={advert} />
         ))}
       </ul>
-      <button>Load more</button>
     </>
   );
 };
