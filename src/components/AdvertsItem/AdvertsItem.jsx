@@ -9,8 +9,17 @@ const AdvertsItem = ({ advert }) => {
       </div>
 
       <div className={css.camper_info}>
-        <h3>{advert.name}</h3>
-        <p>&euro;{`${advert.price},00`}</p>
+        <div>
+          <h3>{advert.name}</h3>
+          <p>&euro;{`${advert.price},00`}</p>
+
+          <button>
+            <svg className={css.favorite_icon} width="24" height="24">
+              <use xlinkHref="../../img/icons.svg#icon-water"></use>
+            </svg>
+          </button>
+        </div>
+
         <p>{advert.rating}</p>
         <p>{advert.location}</p>
         <p className={css.text_description}>{advert.description}</p>

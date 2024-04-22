@@ -1,16 +1,36 @@
 import AdvertsList from 'components/AdvertsList/AdvertsList';
 import FilterForm from 'components/FilterForm/FilterForm';
 import css from './CatalogPage.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchAdverts } from 'store/advertsSlice/thunks';
+import { selectAdverts, selectorPage } from 'store/selectors';
+import { nextPage } from 'store/advertsSlice/advertsSlice';
 
 const CatalogPage = () => {
+  const dispatch = useDispatch();
+  const adverts = useSelector(selectAdverts);
+  const page = useSelector(selectorPage);
+  console.log(page);
+
+  useEffect(() => {
+    dispatch(fetchAdverts(page));
+  }, [dispatch, page]);
+
+  const handlerNextPage = () => {
+    dispatch(nextPage(page + 1));
+  };
+
   return (
     <div className={`container ${css.catalog_container}`}>
       <div className={css.filter_container}>
         <FilterForm />
       </div>
       <div className={css.adverts_container}>
-        <AdvertsList />
-        <button className={css.btn_load_more}>Load more</button>
+        <AdvertsList adverts={adverts} />
+        <button className={css.btn_load_more} onClick={handlerNextPage}>
+          Load more
+        </button>
       </div>
     </div>
   );

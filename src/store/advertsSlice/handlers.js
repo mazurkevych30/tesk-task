@@ -9,6 +9,7 @@ export function handleRejected(state, { error }) {
 }
 
 export function handleFulfilledGet(state, { payload }) {
-  state.adverts = payload;
+  console.log(state);
+  state.adverts = [...state.adverts, ...payload];
   state.isLoading = false;
 }

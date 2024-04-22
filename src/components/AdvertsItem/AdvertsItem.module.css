@@ -7,9 +7,6 @@
   gap: 24px;
 }
 
-/* .details_item {
-} */
-
 .camper_img {
   width: 290px;
   height: 310px;
@@ -32,4 +29,9 @@
   overflow: hidden;
   width: 525px;
   text-overflow: ellipsis;
+}
+
+.favorite_icon {
+  color: black;
+  fill: red;
 }

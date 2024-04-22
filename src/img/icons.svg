@@ -37,7 +37,7 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.24" d="M29.714 5.714h-27.426c-0 0-0.001 0-0.002 0-0.631 0-1.142 0.511-1.142 1.142 0 0.001 0 0.001 0 0.002v-0 18.285c0 0 0 0.001 0 0.002 0 0.631 0.511 1.142 1.142 1.142 0.001 0 0.001 0 0.002 0h27.424c0 0 0.001 0 0.002 0 0.631 0 1.142-0.511 1.142-1.142 0-0.001 0-0.001 0-0.002v0-18.285c0-0.632-0.512-1.144-1.144-1.144v0z"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.24" d="M25.142 11.429h1.144M25.142 16h1.144M19.429 10.286h-12.571c-0 0-0.001 0-0.002 0-0.631 0-1.142 0.511-1.142 1.142 0 0 0 0 0 0v0 9.142c0.001 0.631 0.513 1.142 1.144 1.142h12.571c0.631 0 1.142-0.511 1.142-1.142v-9.142c0-0.631-0.511-1.142-1.142-1.142v0z"></path>
 </symbol>
-<symbol id="icon-location" viewBox="0 0 32 32">
+<symbol id="icon-liconocation" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4" d="M28 13.333c0 9.334-12 17.334-12 17.334s-12-8-12-17.334c0-6.627 5.373-12 12-12s12 5.373 12 12v0z"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4" d="M16 17.333c2.209 0 4-1.791 4-4s-1.791-4-4-4v0c-2.209 0-4 1.791-4 4s1.791 4 4 4v0z"></path>
 </symbol>
@@ -62,7 +62,7 @@
 <symbol id="icon-favorite" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.0667" d="M27.787 6.147c-1.327-1.328-3.161-2.149-5.187-2.149s-3.859 0.821-5.187 2.149l-1.413 1.413-1.413-1.413c-1.327-1.327-3.161-2.148-5.187-2.148-4.051 0-7.335 3.284-7.335 7.335 0 2.026 0.821 3.859 2.148 5.187l11.787 11.787 11.787-11.787c1.328-1.327 2.149-3.161 2.149-5.187s-0.821-3.859-2.149-5.187l-0-0z"></path>
 </symbol>
-<symbol id="icon-beds" viewBox="0 0 32 32">
+<symbol id="-beds" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.24" d="M3 26v-7c0.006-2.207 1.793-3.994 3.999-4h18.001c2.207 0.006 3.994 1.793 4 3.999v7.001M24 15h-18v-6.501c0.005-1.379 1.122-2.496 2.5-2.499h15c1.379 0.005 2.496 1.122 2.499 2.5v6.5h-2z"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.24" d="M3 26v-0.501c0.003-0.827 0.673-1.497 1.501-1.499h22.999c0.828 0.002 1.499 0.673 1.501 1.501v0.499M7 15v-1c0.004-1.103 0.897-1.996 2-2h5c1.103 0.004 1.996 0.897 2 2v0M16 14v1M16 14c0.003-1.103 0.897-1.997 2-2h5c1.103 0.004 1.996 0.897 2 2v1"></path>
 </symbol>
