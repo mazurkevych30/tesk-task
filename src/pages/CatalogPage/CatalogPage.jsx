@@ -10,6 +10,7 @@ import {
   selectorPage,
 } from 'store/selectors';
 import { nextPage } from 'store/advertsSlice/advertsSlice';
+import { Outlet } from 'react-router-dom';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -26,19 +27,22 @@ const CatalogPage = () => {
   };
 
   return (
-    <div className={`container ${css.catalog_container}`}>
-      <div className={css.filter_container}>
-        <FilterForm />
+    <>
+      <Outlet />
+      <div className={`container ${css.catalog_container}`}>
+        <div className={css.filter_container}>
+          <FilterForm />
+        </div>
+        <div className={css.adverts_container}>
+          <AdvertsList adverts={adverts} />
+          {isLoadMore && (
+            <button className={css.btn_load_more} onClick={handlerNextPage}>
+              Load more
+            </button>
+          )}
+        </div>
       </div>
-      <div className={css.adverts_container}>
-        <AdvertsList adverts={adverts} />
-        {isLoadMore && (
-          <button className={css.btn_load_more} onClick={handlerNextPage}>
-            Load more
-          </button>
-        )}
-      </div>
-    </div>
+    </>
   );
 };
 

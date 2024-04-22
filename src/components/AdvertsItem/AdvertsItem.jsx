@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import css from './AdvertsItem.module.css';
 
 const AdvertsItem = ({ advert }) => {
@@ -37,7 +38,8 @@ const AdvertsItem = ({ advert }) => {
             }
           })} */}
         </ul>
-        <button className={`text_main`}>Show more</button>
+        <Link to={`${advert._id}`}>Show more</Link>
+        {/* <button className={`text_main`}>Show more</button> */}
       </div>
     </li>
   );
