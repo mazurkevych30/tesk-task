@@ -25,6 +25,10 @@
 }
 
 .scroll {
-  overflow: auto;
-  height: 100%;
+  overflow-y: auto;
+  max-height: 498px;
+}
+
+.list_img {
+  display: flex;
 }

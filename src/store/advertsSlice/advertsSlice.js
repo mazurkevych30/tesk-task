@@ -1,12 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAdverts } from './thunks';
-import { handlePeding, handleFulfilledGet, handleRejected } from './handlers';
+import { fetchAdvertId, fetchAdverts } from './thunks';
+import {
+  handlePeding,
+  handleFulfilledGet,
+  handleRejected,
+  handleFulfilledGetId,
+} from './handlers';
 
 const advertsSlice = createSlice({
   name: 'adverts',
   initialState: {
     adverts: [],
-    advert: [],
+    advert: {},
     page: 1,
     limit: 4,
     isLoading: false,
@@ -23,6 +28,10 @@ const advertsSlice = createSlice({
     builder.addCase(fetchAdverts.pending, handlePeding);
     builder.addCase(fetchAdverts.fulfilled, handleFulfilledGet);
     builder.addCase(fetchAdverts.rejected, handleRejected);
+
+    builder.addCase(fetchAdvertId.pending, handlePeding);
+    builder.addCase(fetchAdvertId.fulfilled, handleFulfilledGetId);
+    builder.addCase(fetchAdvertId.rejected, handleRejected);
   },
 });
 

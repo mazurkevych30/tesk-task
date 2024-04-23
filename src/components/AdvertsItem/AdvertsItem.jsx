@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import css from './AdvertsItem.module.css';
+import icons from '../../img/icons.svg';
 
 const AdvertsItem = ({ advert }) => {
   //   const detail_arr = Array.from(Object.entries(advert.details));
@@ -16,7 +17,7 @@ const AdvertsItem = ({ advert }) => {
 
           <button>
             <svg className={css.favorite_icon} width="24" height="24">
-              <use xlinkHref="../../img/icons.svg#icon-water"></use>
+              <use href={icons + '#favorite'}></use>
             </svg>
           </button>
         </div>

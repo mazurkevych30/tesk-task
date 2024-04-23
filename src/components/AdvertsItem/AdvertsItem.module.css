@@ -33,5 +33,6 @@
 
 .favorite_icon {
   color: black;
-  fill: red;
+  fill: var(--color-white);
+  stroke: var(--);
 }

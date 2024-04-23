@@ -6,3 +6,9 @@ export async function getAdvertsApi(page) {
   const { data } = await axios.get(`/adverts?page=1&limit=${page * 4}`);
   return data;
 }
+
+export async function getAdvertApi(id) {
+  const { data } = await axios.get(`/adverts/${id}`);
+  // console.log(data);
+  return data;
+}

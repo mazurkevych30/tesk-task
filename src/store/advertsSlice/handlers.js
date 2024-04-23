@@ -13,3 +13,8 @@ export function handleFulfilledGet(state, { payload }) {
   state.isLoadMore = state.limit === state.adverts.length / state.page;
   state.isLoading = false;
 }
+
+export function handleFulfilledGetId(state, { payload }) {
+  state.advert = payload;
+  state.isLoading = false;
+}
