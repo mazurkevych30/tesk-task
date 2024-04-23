@@ -12,6 +12,7 @@ const advertsSlice = createSlice({
   initialState: {
     adverts: [],
     advert: {},
+    favorite: [],
     page: 1,
     limit: 4,
     isLoading: false,
@@ -22,6 +23,16 @@ const advertsSlice = createSlice({
   reducers: {
     nextPage: (state, { payload }) => {
       state.page = payload;
+    },
+    addFavorite: (state, { payload }) => {
+      console.log(payload);
+      const id = state.favorite.findIndex(item => item._id === payload._id);
+
+      if (id !== -1) {
+        state.favorite.splice(id, 1);
+      } else {
+        state.favorite.push(payload);
+      }
     },
   },
   extraReducers: builder => {
@@ -37,4 +48,4 @@ const advertsSlice = createSlice({
 
 export const advertsReducer = advertsSlice.reducer;
 
-export const { nextPage } = advertsSlice.actions;
+export const { nextPage, addFavorite } = advertsSlice.actions;

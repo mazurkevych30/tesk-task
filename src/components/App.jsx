@@ -23,7 +23,16 @@ export const App = () => {
             </Route>
           </Route>
         </Route>
-        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/favorites" element={<FavoritesPage />}>
+          <Route path=":id" element={<Modal />}>
+            <Route path="features" element={<InfoLayout />}>
+              <Route index element={<Features />}></Route>
+            </Route>
+            <Route path="reviews" element={<InfoLayout />}>
+              <Route index element={<Reviews />}></Route>
+            </Route>
+          </Route>
+        </Route>
         <Route path="*" element={<HomePage />} />
       </Route>
     </Routes>
