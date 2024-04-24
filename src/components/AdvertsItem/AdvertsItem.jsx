@@ -4,12 +4,19 @@ import icons from '../../img/icons.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite } from 'store/advertsSlice/advertsSlice';
 import { selectFavorite } from 'store/selectors';
+import DetailsList from 'components/DetailsList/DetailsList';
 
-const AdvertsItem = ({ advert, handleAddFavorite }) => {
-  //   const detail_arr = Array.from(Object.entries(advert.details));
+const AdvertsItem = ({ advert }) => {
   const dispatch = useDispatch();
   const favorite = useSelector(selectFavorite);
   const favoriteActive = favorite.some(item => item._id === advert._id);
+
+  const {
+    adults,
+    transmission,
+    engine,
+    details: { airConditioner: AC, kitchen, beds, shower, toilet },
+  } = advert;
 
   return (
     <li className={css.adverts_item}>
@@ -42,35 +49,43 @@ const AdvertsItem = ({ advert, handleAddFavorite }) => {
             </button>
           </div>
         </div>
+
         <div className={css.rating_container}>
-          <svg className={css.star_icon} width="24" height="24">
-            <use href={icons + '#star'}></use>
-          </svg>
-          <p>{advert.rating}</p>
-          <p>{advert.location}</p>
+          <div className={css.rating}>
+            <svg className={css.star_icon} width="16" height="16">
+              <use href={icons + '#star'}></use>
+            </svg>
+            <p
+              className={css.rating_text}
+            >{`${advert.rating}(${advert.reviews.length} Reviews)`}</p>
+          </div>
+          <div className={css.location}>
+            <svg className={css.location_icon} width="16" height="16">
+              <use href={icons + '#map-pin'}></use>
+            </svg>
+            <p className={css.rating_text}>{advert.location}</p>
+          </div>
         </div>
 
         <p className={css.text_description}>{advert.description}</p>
-        <ul>
-          <li className={css.details_item}>
-            <p>{advert.adults} adults</p>
-          </li>
-          {/* {detail_arr.map((item, index) => {
-            if (item[1]) {
-              return (
-                <li key={index}>
-                  <p>{`${item[1]} ${item}`}</p>
-                </li>
-              );
-            }
-          })} */}
-        </ul>
-        <div className={css.loose}></div>
+
+        <DetailsList
+          key={advert._id}
+          details={{
+            adults,
+            transmission,
+            engine,
+            AC,
+            kitchen,
+            beds,
+            shower,
+            toilet,
+          }}
+        />
+
         <div className={css.btn_show_more}>
           <Link to={`${advert._id}`}>Show more</Link>
         </div>
-
-        {/* <button className={`text_main`}>Show more</button> */}
       </div>
     </li>
   );
