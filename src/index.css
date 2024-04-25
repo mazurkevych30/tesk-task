@@ -73,10 +73,9 @@ img {
   color: var(--Main, #101828);
 
   font-weight: 500;
-  line-height: 1.5; /* 150% */
+  line-height: 1.5;
 }
 
 .body_lock {
-  overflow: hidden;
-  position: fixed;
+  overflow-y: hidden;
 }

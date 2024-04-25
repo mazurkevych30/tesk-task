@@ -19,4 +19,5 @@
   background-color: var(--color-white);
   border: 1px solid rgba(71, 84, 103, 0.2);
   margin-bottom: 100px;
+  cursor: pointer;
 }

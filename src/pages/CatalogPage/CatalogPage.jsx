@@ -28,7 +28,6 @@ const CatalogPage = () => {
 
   return (
     <>
-      <Outlet />
       <div className={`container ${css.catalog_container}`}>
         <div className={css.filter_container}>
           <FilterForm />
@@ -42,6 +41,7 @@ const CatalogPage = () => {
           )}
         </div>
       </div>
+      <Outlet />
     </>
   );
 };

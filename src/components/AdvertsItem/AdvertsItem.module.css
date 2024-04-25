@@ -8,6 +8,7 @@
 }
 
 .camper_img {
+  border-radius: 10px;
   width: 290px;
   height: 310px;
   overflow: hidden;
@@ -56,12 +57,15 @@
   line-height: 1.5;
 }
 
+.decoration {
+  text-decoration: underline;
+}
+
 /* favorite */
 
 .btn_favorite {
   background-color: var(--color-white);
   border: none;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,11 +75,13 @@
 .favorite_icon {
   fill: var(--color-white);
   stroke: var(--color-main);
+  cursor: pointer;
 }
 
 .favorite_icon_active {
   fill: var(--color-red);
   stroke: var(--color-red);
+  cursor: pointer;
 }
 
 /* rating */

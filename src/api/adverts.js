@@ -9,6 +9,5 @@ export async function getAdvertsApi(page) {
 
 export async function getAdvertApi(id) {
   const { data } = await axios.get(`/adverts/${id}`);
-  // console.log(data);
   return data;
 }

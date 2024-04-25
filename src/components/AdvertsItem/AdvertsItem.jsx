@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './AdvertsItem.module.css';
 import icons from '../../img/icons.svg';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,6 +9,8 @@ import DetailsList from 'components/DetailsList/DetailsList';
 const AdvertsItem = ({ advert }) => {
   const dispatch = useDispatch();
   const favorite = useSelector(selectFavorite);
+  const location = useLocation();
+
   const favoriteActive = favorite.some(item => item._id === advert._id);
 
   const {
@@ -30,6 +32,7 @@ const AdvertsItem = ({ advert }) => {
           <div className={css.favorite_container}>
             <p className={css.title_text}>&euro;{`${advert.price},00`}</p>
             <button
+              type="button"
               className={css.btn_favorite}
               onClick={() => dispatch(addFavorite(advert))}
             >
@@ -56,7 +59,7 @@ const AdvertsItem = ({ advert }) => {
               <use href={icons + '#star'}></use>
             </svg>
             <p
-              className={css.rating_text}
+              className={`${css.rating_text} ${css.decoration}`}
             >{`${advert.rating}(${advert.reviews.length} Reviews)`}</p>
           </div>
           <div className={css.location}>
@@ -84,7 +87,9 @@ const AdvertsItem = ({ advert }) => {
         />
 
         <div className={css.btn_show_more}>
-          <Link to={`${advert._id}`}>Show more</Link>
+          <Link to={`${advert._id}`} state={location}>
+            Show more
+          </Link>
         </div>
       </div>
     </li>
