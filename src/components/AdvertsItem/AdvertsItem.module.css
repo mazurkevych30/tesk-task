@@ -20,18 +20,18 @@
   object-fit: cover;
 }
 
-.css.camper_info {
+.camper_info {
   width: 525px;
 }
 
 .name_container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .favorite_container {
   display: flex;
-  margin-bottom: 8px;
 }
 
 /* text */
@@ -122,4 +122,9 @@
   background-color: var(--color-red);
   color: var(--color-white);
   border: 1px solid rgba(71, 84, 103, 0.2);
+  margin-top: 24px;
+}
+
+.btn_show_more a:is(:focus, :hover) {
+  background-color: #d84343;
 }

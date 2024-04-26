@@ -1,0 +1,16 @@
+.info_container {
+  display: flex;
+  gap: 24px;
+}
+
+.details_container {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  width: 430px;
+}
+
+.form_container {
+  width: 400px;
+  padding: 24px;
+}

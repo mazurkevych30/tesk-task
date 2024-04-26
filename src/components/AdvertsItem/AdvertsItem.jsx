@@ -73,7 +73,6 @@ const AdvertsItem = ({ advert }) => {
         <p className={css.text_description}>{advert.description}</p>
 
         <DetailsList
-          key={advert._id}
           details={{
             adults,
             transmission,

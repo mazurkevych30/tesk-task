@@ -98,14 +98,14 @@ const Modal = () => {
 
             <p className={css.text_description}>{advert.description}</p>
 
-            <ul className={css.list_item}>
-              <li>
-                <NavLink className={css.link} to={'features'} state={location}>
+            <ul className={css.list_info}>
+              <li className={css.list_info_item}>
+                <NavLink to={'features'} state={location}>
                   Features
                 </NavLink>
               </li>
-              <li>
-                <NavLink className={css.link} to={'reviews'} state={location}>
+              <li className={css.list_info_item}>
+                <NavLink to={'reviews'} state={location}>
                   Reviews
                 </NavLink>
               </li>

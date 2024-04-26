@@ -1,0 +1,49 @@
+.star_active {
+  fill: var(--color-star);
+}
+
+.star {
+  fill: var(--color-details);
+}
+
+.reviews_list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.person_info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.person_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: var(--color-details);
+}
+
+.text_img {
+  color: var(--color-red);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.person_name {
+  color: var(--color-main);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.person_comment {
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
