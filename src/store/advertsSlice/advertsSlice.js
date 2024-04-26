@@ -16,11 +16,14 @@ const advertsSlice = createSlice({
     page: 1,
     limit: 4,
     isLoading: false,
-    isLoadMore: false,
+    isLoadMore: true,
     isShowModal: false,
     error: '',
   },
   reducers: {
+    removeAdv: state => {
+      state.page = [];
+    },
     nextPage: (state, { payload }) => {
       state.page = payload;
     },
@@ -48,4 +51,4 @@ const advertsSlice = createSlice({
 
 export const advertsReducer = advertsSlice.reducer;
 
-export const { nextPage, addFavorite } = advertsSlice.actions;
+export const { nextPage, addFavorite, removeAdv } = advertsSlice.actions;

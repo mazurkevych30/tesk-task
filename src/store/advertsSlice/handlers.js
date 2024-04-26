@@ -9,8 +9,8 @@ export function handleRejected(state, { error }) {
 }
 
 export function handleFulfilledGet(state, { payload }) {
-  state.adverts = payload;
-  state.isLoadMore = state.limit === state.adverts.length / state.page;
+  state.adverts = [...state.adverts, ...payload];
+  state.isLoadMore = payload.length >= state.limit;
   state.isLoading = false;
 }
 
